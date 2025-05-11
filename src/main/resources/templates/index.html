@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Good Thymes Virtual Grocery</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<p>Welcome to Thymeleaf!</p>
-</body>
+    <head>
+        <title>Kanban Board</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/styles.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>Kanban Board</h1>
+        </header>
+        <main class="board">
+            <section class="column">
+                <header>
+                    <h2>offen</h2>
+                </header>
+                <div th:insert="~{fragments/task :: article(~{ :: .task})}"></div>
+            </section>
+             <section class="column">
+                <header>
+                    <h2>in Arbeit</h2>
+                </header>
+                <article class="task">
+                    <h3>Aufgabe 1</h3>
+                </article>
+                <article class="task">
+                    <h3>Aufgabe 2</h3>
+                </article>
+            </section>
+             <section class="column">
+                <header>
+                    <h2>bearbeitet</h2>
+                </header>
+                <article class="task">
+                    <h3>Aufgabe 1</h3>
+                </article>
+                <article class="task">
+                    <h3>Aufgabe 2</h3>
+                </article>
+            </section>
+        </main>
+    </body>
 </html>
