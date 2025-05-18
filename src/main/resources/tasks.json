@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Aufgabe 1",
+    "description": "Dies ist die erste Aufgabe",
+    "status": "offen"
+  },
+  {
+    "id": 2,
+    "title": "Aufgabe 2",
+    "description": "Dies ist die zweite Aufgabe",
+    "status": "offen"
+  },
+  {
+    "id": 3,
+    "title": "Aufgabe 3",
+    "description": "Dies ist die dritte Aufgabe",
+    "status": "offen"
+  }
+]
