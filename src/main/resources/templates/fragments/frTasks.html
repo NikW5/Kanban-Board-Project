@@ -1,0 +1,9 @@
+<!-- Fragment Aufgabe -->
+<article th:fragment="article(tasks)">
+    <div th:each="task : ${tasks}" class="task">
+        <h3 th:text="${'#' + task.id + ' ' + task.title}">fallback Überschrift</h3>
+        <p th:text="${task.description}">fallback Beschreibung</p>
+        <p th:text="${task.status}">fallback Status</p>
+    </div>
+</article>
+

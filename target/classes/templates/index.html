@@ -15,57 +15,20 @@
                 <header>
                     <h2>offen</h2>
                 </header>
-                <div th:insert="~{fragments/task2 :: article(~{ :: .task})}"></div>
+                <div th:insert="~{fragments/frTasks :: article(${openTasks})}"></div>
             </section>
              <section class="column">
                 <header>
                     <h2>in Arbeit</h2>
                 </header>
-                <article class="task">
-                    <h3>Aufgabe 1</h3>
-                </article>
-                <article class="task">
-                    <h3>Aufgabe 2</h3>
-                </article>
+                 <div th:insert="~{fragments/frTasks :: article(${inProgressTasks})}"></div>
             </section>
              <section class="column">
                 <header>
                     <h2>bearbeitet</h2>
                 </header>
-                <article class="task">
-                    <h3>Aufgabe 1</h3>
-                </article>
-                <article class="task">
-                    <h3>Aufgabe 2</h3>
-                </article>
+                 <div th:insert="~{fragments/frTasks :: article(${completedTasks})}"></div>
             </section>
-
-
-
-            <section class="column">
-                <header>
-                    <h2>RandomTest</h2>
-                </header>
-                <div>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr th:each="task : ${tasks}">
-                            <td th:text="${task.id}"></td>
-                            <td th:text="${task.title}"></td>
-                            <td th:text="${task.description}"></td>
-                            <td th:text="${task.status}"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
         </main>
     </body>
 </html>
