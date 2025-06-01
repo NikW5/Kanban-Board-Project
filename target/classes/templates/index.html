@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- <html xmlns:th="http://www.thymeleaf.org"> -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Kanban Board</title>
@@ -10,6 +9,9 @@
         <header>
             <h1>Kanban Board</h1>
         </header>
+        <form th:action="@{/createTask}" method="post">
+            <button type="submit">Neue Aufgabe</button>
+        </form>
         <main class="board">
             <section class="column">
                 <header>

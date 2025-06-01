@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d59ffd3b-5cc1-4570-a533-92146bbfef81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kanban/spring/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/task.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kanban/spring/KanbanBoardProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kanban/spring/KanbanBoardProjectApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kanban/spring/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kanban/spring/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kanban/spring/controller/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kanban/spring/entities/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/task2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/frTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/frTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/frTasks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kanban/spring/controller/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/frTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/frTasks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +48,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -56,6 +67,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.KanbanBoardProjectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Gradle./home/nik/Dokumente/GitHub/Kanban-Board-Project/build.gradle.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,

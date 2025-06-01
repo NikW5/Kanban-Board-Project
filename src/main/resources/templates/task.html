@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Aufgabe</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <h1>Aufgabe anlegen</h1>
+</header>
+<main class="board">
+  <form th:action="@{/save}" method="post" class="taskform">
+    <div>
+      <label for="taskId">ID</label>
+      <input id="taskId" name="taskId" type="text" placeholder="ID" th:value="${taskId}"/>
+    </div>
+    <div>
+      <label for="taskTitle">Titel *</label>
+      <input id="taskTitle" name="taskTitle" type="text" placeholder="Titel" th:value="${taskTitle}"/>
+    </div>
+    <div>
+      <label for="taskDescription">Beschreibung</label>
+      <textarea id="taskDescription" name="taskDescription" placeholder="Beschreibung" rows="5" cols="30" th:text="${taskDescription}"></textarea>
+    </div>
+    <div>
+      <label for="taskStatus">Status</label>
+      <select id="taskStatus" name="taskStatus">
+        <option value="offen" th:selected="${taskStatus == 'offen'}">offen</option>
+        <option value="in Bearbeitung" th:selected="${taskStatus == 'in Bearbeitung'}">in Bearbeitung</option>
+        <option value="bearbeitet" th:selected="${taskStatus == 'bearbeitet'}">bearbeitet</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit">speichern</button>
+    </div>
+    <div>
+      <button type="submit" th:formaction="@{/cancel}">abbrechen</button>
+    </div>
+  </form>
+</main>
+</body>
+</html>

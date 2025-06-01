@@ -1,7 +1,16 @@
 //package model;
-package com.kanban.spring.controller;
+package com.kanban.spring.entities;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+
+//@Entity
 public class Task {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String title;
     private String description;
@@ -39,3 +48,7 @@ public class Task {
         this.status = status;
     }
 }
+
+
+
+

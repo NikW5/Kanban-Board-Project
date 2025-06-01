@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KanbanBoardProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KanbanBoardProjectApplication.class, args);
+		SpringApplication.run(KanbanBoardProjectApplication.class, args); //Spring App wird ausgeführt
 	}
 
 }
