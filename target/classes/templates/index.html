@@ -10,24 +10,24 @@
             <h1>Kanban Board</h1>
         </header>
         <form th:action="@{/createTask}" method="post">
-            <button type="submit">Neue Aufgabe</button>
+            <button type="submit" class="primaryBtn">Neue Aufgabe</button>
         </form>
         <main class="board">
             <section class="column">
                 <header>
-                    <h2>offen</h2>
+                    <h2>offen (Anzahl)</h2>
                 </header>
                 <div th:insert="~{fragments/frTasks :: article(${openTasks})}"></div>
             </section>
              <section class="column">
                 <header>
-                    <h2>in Arbeit</h2>
+                    <h2>in Arbeit (Anzahl)</h2>
                 </header>
                  <div th:insert="~{fragments/frTasks :: article(${inProgressTasks})}"></div>
             </section>
              <section class="column">
                 <header>
-                    <h2>bearbeitet</h2>
+                    <h2>bearbeitet (Anzahl)</h2>
                 </header>
                  <div th:insert="~{fragments/frTasks :: article(${completedTasks})}"></div>
             </section>

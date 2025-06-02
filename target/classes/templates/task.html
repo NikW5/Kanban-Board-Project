@@ -9,21 +9,21 @@
 <header>
   <h1>Aufgabe anlegen</h1>
 </header>
-<main class="board">
+<main class="formTask">
   <form th:action="@{/save}" method="post" class="taskform">
-    <div>
+    <div class="formInput">
       <label for="taskId">ID</label>
       <input id="taskId" name="taskId" type="text" placeholder="ID" th:value="${taskId}"/>
     </div>
-    <div>
+    <div class="formInput">
       <label for="taskTitle">Titel *</label>
       <input id="taskTitle" name="taskTitle" type="text" placeholder="Titel" th:value="${taskTitle}"/>
     </div>
-    <div>
+    <div class="formInput">
       <label for="taskDescription">Beschreibung</label>
       <textarea id="taskDescription" name="taskDescription" placeholder="Beschreibung" rows="5" cols="30" th:text="${taskDescription}"></textarea>
     </div>
-    <div>
+    <div class="formInput">
       <label for="taskStatus">Status</label>
       <select id="taskStatus" name="taskStatus">
         <option value="offen" th:selected="${taskStatus == 'offen'}">offen</option>
@@ -32,10 +32,10 @@
       </select>
     </div>
     <div>
-      <button type="submit">speichern</button>
+      <button type="submit" class="primaryBtn">speichern</button>
     </div>
     <div>
-      <button type="submit" th:formaction="@{/cancel}">abbrechen</button>
+      <button type="submit" th:formaction="@{/cancel}" class="secondaryBtn">abbrechen</button>
     </div>
   </form>
 </main>
