@@ -3,6 +3,7 @@ package com.kanban.spring.controller;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.kanban.spring.entities.Task;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +42,11 @@ public class TaskController {
 
     @GetMapping("/task/{id}")
     public String showTaskPage(@PathVariable String id, Model model) {
+        try {
+            tasks = objectMapper.readTree(Paths.get(jsonPath).toFile());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         model.addAttribute("taskId", id);
 
         for (JsonNode node : tasks) { // eine for-each Schleife; tasks ist ein Array aus JsonNode Objekten
@@ -70,26 +76,34 @@ public class TaskController {
         // Hier kommt die Logik der Methode
         logger.info("Aufgabe gespeichert! ID: " + taskId + ", Titel: " + taskTitle + ", Beschreibung: " + taskDescription + ", Status: " + taskStatus);
         if(!taskId.isEmpty()) {
-//            if() {
-//                // wenn die Aufgabe vorhanden ist, dann soll das passende JSON Objekt bearbeitet werden
-//            } else {
-//                // wenn die Aufgabe noch nicht vorhanden ist, soll sie angelegt werden
-//            }
+
             // JSON-Datei laden
             File file = new File(jsonPath);
             List<Task> tasks;
             try {
                 tasks = objectMapper.readValue(file, new TypeReference<List<Task>>() {});
+                boolean isNewTask = true;
+                for (Task task : tasks) {
+                    if (task.getId().toString().equals(taskId)) {
+                        task.setTitle(taskTitle);
+                        task.setDescription(taskDescription);
+                        task.setStatus(taskStatus);
+                        isNewTask = false;
+                        break; // Sobald gefunden, wird es geändert und die Schleife beendet
+                    }
+                }
 
-                // ID für neue Aufgabe setzen
-                Task newTask = new Task();
-                newTask.setId(Long.parseLong(taskId)); // String taskId wird zu einem Long umgewandelt
-                newTask.setTitle(taskTitle);
-                newTask.setDescription(taskDescription);
-                newTask.setStatus(taskStatus);
+                if (isNewTask) {
+                    Task newTask = new Task();
+                    newTask.setId(Long.parseLong(taskId)); // String taskId wird zu einem Long umgewandelt
+                    newTask.setTitle(taskTitle);
+                    newTask.setDescription(taskDescription);
+                    newTask.setStatus(taskStatus);
 
-                // Neue Aufgabe zur Liste hinzufügen
-                tasks.add(newTask);
+                    // Neue Aufgabe zur Liste hinzufügen
+                    tasks.add(newTask);
+                }
+
 
                 // JSON-Datei aktualisieren
                 objectMapper.writeValue(file, tasks);
