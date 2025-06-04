@@ -15,19 +15,19 @@
         <main class="board">
             <section class="column">
                 <header>
-                    <h2>offen (Anzahl)</h2>
+                    <h2 th:text="${'offen (' + amountOpenTasks + ')'}">offen (Anzahl)</h2>
                 </header>
                 <div th:insert="~{fragments/frTasks :: article(${openTasks})}"></div>
             </section>
              <section class="column">
                 <header>
-                    <h2>in Arbeit (Anzahl)</h2>
+                    <h2 th:text="${'in Arbeit (' + amountInProgressTasks + ')'}">in Arbeit (Anzahl)</h2>
                 </header>
                  <div th:insert="~{fragments/frTasks :: article(${inProgressTasks})}"></div>
             </section>
              <section class="column">
                 <header>
-                    <h2>bearbeitet (Anzahl)</h2>
+                    <h2 th:text="${'bearbeitet (' + amountCompletedTasks + ')'}">bearbeitet (Anzahl)</h2>
                 </header>
                  <div th:insert="~{fragments/frTasks :: article(${completedTasks})}"></div>
             </section>

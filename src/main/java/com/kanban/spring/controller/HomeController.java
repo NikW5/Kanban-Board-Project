@@ -84,10 +84,16 @@ public class HomeController { // verlinkt mit unserer Homepage
         // Wandelt die JSON-Daten in Task-Objekte um und übergibt sie an das Model, Verknüpfung zwischen Controller und Thymeleaf, Attribute für jede Aufgabenart anlegen und befüllen und dann in thymeleaf nutzen
         List<Task> openTasks = objectMapper.convertValue(openNodes, new TypeReference<List<Task>>() {});
         model.addAttribute("openTasks", openTasks);
+        logger.error("Größe: " + openNodes.size());
+        model.addAttribute("amountOpenTasks", openNodes.size());
         List<Task> inProgressTasks = objectMapper.convertValue(inProgressNodes, new TypeReference<List<Task>>() {});
         model.addAttribute("inProgressTasks", inProgressTasks);
+        model.addAttribute("amountInProgressTasks", inProgressNodes.size());
         List<Task> completedTasks = objectMapper.convertValue(completedNodes, new TypeReference<List<Task>>() {});
         model.addAttribute("completedTasks", completedTasks);
+        model.addAttribute("amountCompletedTasks", completedNodes.size());
+
+
 
         return "index"; // Index-Seite wird geladen
     }
