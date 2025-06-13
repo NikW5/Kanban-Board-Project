@@ -93,8 +93,6 @@ public class HomeController { // verlinkt mit unserer Homepage
         model.addAttribute("completedTasks", completedTasks);
         model.addAttribute("amountCompletedTasks", completedNodes.size());
 
-
-
         return "index"; // Index-Seite wird geladen
     }
 

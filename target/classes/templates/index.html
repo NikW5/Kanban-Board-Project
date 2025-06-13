@@ -6,9 +6,7 @@
         <link th:href="@{/styles.css}" rel="stylesheet" />
     </head>
     <body>
-        <header>
-            <h1>Kanban Board</h1>
-        </header>
+        <header th:insert="~{fragments/header}"></header>
         <form th:action="@{/createTask}" method="post">
             <button type="submit" class="primaryBtn">Neue Aufgabe</button>
         </form>
@@ -32,5 +30,6 @@
                  <div th:insert="~{fragments/frTasks :: article(${completedTasks})}"></div>
             </section>
         </main>
+        <footer th:insert="~{fragments/footer}"></footer>
     </body>
 </html>

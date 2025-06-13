@@ -6,9 +6,7 @@
   <link th:href="@{/styles.css}" rel="stylesheet" />
 </head>
 <body>
-<header>
-  <h1>Aufgabe anlegen</h1>
-</header>
+<header th:insert="~{fragments/header}"></header>
 <main class="formTask">
   <form th:action="@{/save}" method="post" class="taskform">
     <div class="formInput">
@@ -39,5 +37,6 @@
     </div>
   </form>
 </main>
+<footer th:insert="~{fragments/footer}"></footer>
 </body>
 </html>
